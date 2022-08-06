@@ -4,7 +4,6 @@
       <Banner></Banner>
     </div>
     <div class="recommendBox">
-      <h3>推荐歌单</h3>
       <Recommend></Recommend>
     </div>
   </div>
@@ -46,10 +45,6 @@ export default {
     height: 200px;
   }
   .recommendBox {
-    h3 {
-      margin-left: 10px;
-      font-weight: 400;
-    }
     width: 100%;
     margin: 10px 0;
   }

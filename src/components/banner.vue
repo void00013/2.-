@@ -11,7 +11,7 @@
       <a href="javascript:;" class="move right" @click="btnRight">
         <img src="../assets/svg/you.svg" alt="右">
       </a>
-      <ul ref="banner" @transitionend="endTrn">
+      <ul ref="banner" id="banner" @transitionend="endTrn">
         <li v-if="banners.length !== 0">
           <a href="javascript:;">
             <img :src="banners[banners.length - 1].imageUrl" :alt="banners[banners.length - 1].targetId">
@@ -70,9 +70,12 @@ export default {
       if(this.flag) {
         this.flag = false
         this.num--
-        // var banner = <HTMLElement>this.$refs.banner
         this.$refs.banner.style.transition = 'all 0.5s'
         this.$refs.banner.style.transform = `translateX(${this.num * 540}px)`
+        // var banner = document.getElementById('banner')
+        // console.log(banner)
+        // banner.style.transition = 'all 0.5s'
+        // banner.style.transform = `translateX(${this.num * 540}px)`
       }
     },
     // 轮播图过渡完成的事件
@@ -115,6 +118,7 @@ export default {
   // },
   beforeDestroy() {
     clearInterval(this.timer)
+    this.timer = null
   },
 }
 </script>

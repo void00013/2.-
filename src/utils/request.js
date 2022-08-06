@@ -2,6 +2,7 @@ import axios from 'axios'
 import { ElMessage } from 'element-plus'
 
 const request = axios.create({ baseURL: 'https://1-vmusic-api.vercel.app' })
+// const request = axios.create({ baseURL: 'http://localhost:3000' })
 
 // 添加请求拦截器
 // request.interceptors.request.use(function (config) {
@@ -13,23 +14,23 @@ const request = axios.create({ baseURL: 'https://1-vmusic-api.vercel.app' })
 // });
 
 // 添加响应拦截器
-request.interceptors.response.use(function (res) {
-    // 对响应数据做点什么
-    if(res.data.code === 200) {
-      ElMessage({
-        message: '数据请求成功',
-        type: 'success',
-      })
-    }
-    if(res.data.code !== 200) {
-      ElMessage({
-        message: res.data.msg,
-        type: 'error',
-      })
-    }
-    return res;
-  }, function (error) {
-    console.log(error)
-  });
+// request.interceptors.response.use(function (res) {
+//     // 对响应数据做点什么
+//     if(res.data.code === 200) {
+//       ElMessage({
+//         message: '数据请求成功',
+//         type: 'success',
+//       })
+//     }
+//     if(res.data.code !== 200) {
+//       ElMessage({
+//         message: res.data.msg,
+//         type: 'error',
+//       })
+//     }
+//     return res;
+//   }, function (error) {
+//     console.log(error)
+//   });
 
 export default request

@@ -5,7 +5,6 @@
       <h3>推荐</h3>
       <ul>
         <li @click="$router.push('/index/find')">每日推荐</li>
-        <li @click="$router.push('/aa')">歌曲搜索</li>
       </ul>
     </div>
     <!-- 我的音乐 -->

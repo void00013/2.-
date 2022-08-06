@@ -26,6 +26,13 @@ li {
   list-style: none;
 }
 
+/* 全局配置 input 的 placeholder 的颜色 */
+::-webkit-input-placeholder {
+  font-size: 16px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.5);
+}
+
 /* 滚动条整体样式 */
 ::-webkit-scrollbar {
   width: 6px;
